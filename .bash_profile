@@ -1,0 +1,3 @@
+export MAILGUN_DOMAIN_URL=your_mailgun_domain
+export MAILGUN_DEFAULT_SMTP=postmaster@your_mailgun_domain
+export MAILGUN_PASSWORD=your_mailgun_password

@@ -1,0 +1,35 @@
+<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+<div class="fb-share-button" data-href="//localhost:3000" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocalhost%3A3000%2F&amp;src=sdkpreparse">Share</a></div>
+<br>
+
+...
+<%= render 'comments/form', comment: @comment, post: @post%>
+...
+<% @comments.each do |comment| %>
+  <p><%= comment.user.email %> - <%= comment.created_at %></p>
+  <p><%= comment.context %></p>
+<% end %>
