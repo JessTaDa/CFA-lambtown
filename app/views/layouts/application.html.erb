@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= current_user.inspect %>
+    <% else %>
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+    <% end %>
 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
