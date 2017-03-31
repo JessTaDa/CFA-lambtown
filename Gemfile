@@ -17,6 +17,8 @@ gem 'omniauth-facebook'
 gem "bulma-rails", "~> 0.4.0"
 gem 'friendly_id', '~> 5.1.0'
 gem 'simple_form'
+gem "rolify"
+gem "pundit"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
